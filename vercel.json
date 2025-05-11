@@ -1,6 +1,3 @@
 {
-    "rewrites": [
-      { "source": "/", "destination": "/deploy.html" }
-    ]
-  }
-  
+  "routes": [{ "src": "/", "dest": "/deploy.html" }]
+}
