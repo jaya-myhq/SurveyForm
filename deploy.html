@@ -93,9 +93,10 @@
 
             <!-- File Upload -->
             <div class="max-w-md mx-auto">
-                <label class="block font-semibold mb-1">Images(Google Drive Link)</label>
-                <input type="url" name="googleDriveLink" class="w-full border border-gray-300 px-4 py-2 rounded" />
-            </div>
+    <label class="block font-semibold mb-1">Upload Images</label>
+    <input type="file" name="imageFiles" accept="image/*" multiple class="w-full border border-gray-300 px-4 py-2 rounded" />
+</div>
+
 
             <!-- Floor Configuration Table -->
             <div class="max-w-7xl mx-auto mt-10">
@@ -357,7 +358,6 @@
                         <td class="px-4 py-2 border">${timeConverted(survey.updatedAt) || 'N/A'}</td>
                         <td class="px-4 py-2 border">
                             <button onclick='editSurvey(${index})' class="bg-yellow-500 text-white px-4 py-2 rounded-md">Edit</button>
-                            <button onclick='deleteSurveyByAddress(${index})' class="bg-red-500 text-white px-4 py-2 rounded-md">Delete</button>
                         </td>
                     `;
 
