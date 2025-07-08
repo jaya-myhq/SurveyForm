@@ -140,6 +140,8 @@ app.delete("/survey/:streetAddress", async (req, res) => {
   }
 });
 
-
+app.get("/keepalive", (req, res) => {
+  res.status(200).json({ message: "Server is awake" });
+});
 
 app.listen(3000, () => console.log("Server started on port 3000"));

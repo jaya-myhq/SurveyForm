@@ -176,6 +176,15 @@
     </div>
 
     <script>
+        // Keep server awake
+        function keepServerAwake() {
+            fetch("https://surveyform-nbl0.onrender.com/keepalive")
+                .then(() => console.log("Keep-alive ping sent"))
+                .catch(() => console.log("Keep-alive ping failed"));
+        }
+        keepServerAwake();
+        setInterval(keepServerAwake, 300000); // 5 minutes
+
         function getFloorSuffix(n) {
             if (n % 10 === 1 && n % 100 !== 11) return "st";
             if (n % 10 === 2 && n % 100 !== 12) return "nd";
